@@ -8,8 +8,8 @@ import java.io.File
 
 fun Application.session() {
     install(Sessions) {
-        val secretEncryptedKey = hex("13b6e456116ad18f")
-        val secretAuthKey = hex("491abbe235820cc9")
+        val secretEncryptedKey = hex("cb09b74997e75deb96354a4243d6f23d")
+        val secretAuthKey = hex("84518333afe0ec596eafbf5447ae052c")
         cookie<UserSession>(
             name = "USER_SESSION",
             storage = directorySessionStorage(File(".sessions"))
