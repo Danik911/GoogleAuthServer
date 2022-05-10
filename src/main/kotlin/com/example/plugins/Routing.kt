@@ -16,6 +16,6 @@ fun Application.configureRouting() {
         root()
         unauthorisedUser()
         authorized()
-        tokenVerification()
+        tokenVerification(application)
     }
 }
