@@ -1,5 +1,6 @@
 package com.example.di
-
+import com.example.data.repository.UserDataSourceImpl
+import com.example.domain.repository.UserDataSource
 import com.example.util.Constants.USER_DATABASE
 import org.koin.dsl.module
 import org.litote.kmongo.coroutine.coroutine
@@ -10,5 +11,8 @@ val koinModule = module {
         KMongo.createClient()
             .coroutine
             .getDatabase(USER_DATABASE)
+    }
+    single<UserDataSource> {
+        UserDataSourceImpl(get())
     }
 }
