@@ -1,10 +1,7 @@
 package com.example.plugins
 
 import com.example.domain.repository.UserDataSource
-import com.example.routes.authorized
-import com.example.routes.root
-import com.example.routes.tokenVerification
-import com.example.routes.unauthorisedUser
+import com.example.routes.*
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -20,6 +17,8 @@ fun Application.configureRouting() {
         tokenVerification(application, userDataSource)
         unauthorisedUser()
         authorized()
+        getUserInformationRoute(app = application, userDataSource = userDataSource)
+        updateUserInfo(app = application, userDataSource = userDataSource)
 
     }
 }
