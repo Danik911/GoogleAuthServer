@@ -6,7 +6,7 @@ sealed class Endpoint(val route: String){
     object GetUser: Endpoint(route = "/get_user_info")
     object UpdateUser: Endpoint(route = "/update_user_info")
     object DeleteUser: Endpoint(route = "/delete_user")
-    object SignIn: Endpoint(route = "/sign_in")
+    object SignOut: Endpoint(route = "/sign_out")
     object AuthorisedAccess: Endpoint(route = "/authorised_access")
     object UnAuthorisedAccess: Endpoint(route = "/unauthorised_access")
 }

@@ -17,8 +17,10 @@ fun Application.configureRouting() {
         tokenVerification(application, userDataSource)
         unauthorisedUser()
         authorized()
+        deleteUser(app = application, userDataSource = userDataSource)
         getUserInformationRoute(app = application, userDataSource = userDataSource)
         updateUserInfo(app = application, userDataSource = userDataSource)
+        signOut(app = application)
 
     }
 }
